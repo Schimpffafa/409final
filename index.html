@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>GEO409 Final Project</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Set margin/padding to fit border in box model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Define styles on body (and all descendants) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      color: rgb(32, 32, 32);
+      background-color: rgb(236, 232, 228);
+    }
+
+    /* Define styles for the headings */
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 10px 0;
+      padding: 0;
+      color: rgb(0, 0, 0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Define styles for the paragraph */
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: rgb(12, 73, 34);
+    }
+
+    a:hover {
+      color: rgb(86, 86, 86);
+      text-decoration: none;
+    }
+
+    section {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    footer {
+      width: 80%;
+      margin: 0 auto;
+      color: rgb(100, 100, 100);
+    }
+
+    iframe {
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      color: rgb(100, 100, 100);
+    }
+
+    .title {
+      text-align: left;
+      margin: 20px;
+    }
+
+    /* Set up a container for the two columns */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Define styles for the left column */
+    .left-column {
+      flex-basis: 40%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Define styles for the right column */
+    .right-column {
+      flex-basis: 55%;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Round image corners for images inside the right-column */
+    .right-column img {
+      border-radius: 10px;
+    }
+
+    /* Media query for small screens */
+    /* For screens up to 768px, apply these rules. */
+    @media (max-width: 768px) {
+
+      /* Change to a single column layout */
+      .container {
+        flex-direction: column;
+      }
+
+      /* Set full width for both columns */
+      .left-column,
+      .right-column {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <section>
+    <!-- 💡💡💡 Cesium map: paste embed code below -->
+    <iframe title="University of Kentucky" width="100%" height="650" 
+      src="https://ion.cesium.com/stories/viewer/?id=5663c9e0-d66b-459e-9b5f-b6ebc4f5abbb" frameborder="0" 
+      allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </iframe>
+    <!-- 💡💡💡 Cesium map: paste embed code above -->
+    <p class="caption">Caption for Cesium slideshow</p>
+    <div class="title">
+      <h1>UK seems to be always under construction</h1>
+      <h2>And there is plenty of evidence to support that claim</h2>
+    </div>
+    <div class="container">
+      <div class="left-column">
+        <h3>University of Kentucky; Lexington, KY</h3>
+        <p>
+          The University of Kentucky is located in the heart of Lexington, a very short distance from Downtown. 
+          Founded in 1865, UK holds the highest enrollment of any University in the state, at 32 thousand students in the Fall of 2022.
+        </p>
+
+        <p>
+          The goal of this project is to explore, in 3D, current representations of the University of Kentucky through Cesium ion, 
+          as well as look at what buildings have changed in the previous 10 or so years for the University. 
+        </p>
+
+        <p>
+          Visualizations created from lidar data provided by
+          <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro and
+          Blender. 
+        </p>
+
+        <p>
+          Page and visualizations created by Parker Schimpff for GEO 409, Department of
+          Geography, University of Kentucky. Spring 2024.
+        </p>
+        
+        <img src="ukyRemoved.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">Removal change map of University of Kentucky</p>
+
+      </div>
+      <div class="right-column">
+        <h3>Visualizing Change </h3>
+        <img src="ukyBuilt.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">Construction change map of University of Kentucky</p>
+      </div>
+    </div>
+
+     <!-- 💡💡💡 Cesium map: paste embed code below -->
+     <iframe title="University of Louisville" width="100%" height="650" 
+        src="https://ion.cesium.com/stories/viewer/?id=1365dc1e-e38b-404c-910a-0e95132ca8f7" frameborder="0" 
+        allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+   </iframe>
+   <!-- 💡💡💡 Cesium map: paste embed code above -->
+   <p class="caption">Caption for Cesium slideshow</p>
+   <div class="title">
+     <h1>UofL also experiences change</h1>
+     <h2>A comparison between Kentucky's largest universities</h2>
+   </div>
+   <div class="container">
+     <div class="left-column">
+       <h3>University of Louisville; Louisville, KY</h3>
+       <p>
+         The University of Louisville was founded in 1798, being one of the first city-owned public colleges in the United States. 
+         It became a state funded university in 1970.
+       </p>
+
+       <p>
+         This project aims not only to look at the change that has happened at UofL and UK, but also compare the two universities.
+         UK and UofL are both R1 research institutions and have a large swath of undergraduate and graduate level degrees offered. 
+         Both universities are within walking distance of the downtown area of their cities. They both contain walkable campuses, however, UK's campus is much larger than UofL's. 
+       </p>
+
+       <p>
+        UK has a acceptance rate of 95% and a graduation rate of 66%, compared to UofL's acceptance rate of 80% and graduation rate of 62%.
+        The population of Louisville is nearly double Lexington, 624 thousand compared to 320 thousand in 2022. This doesn't take into account the metro area of Louisville, nor the 
+        influx of workers during working hours of weekdays. 
+       </p>
+       <p>
+         Visualizations created from lidar data provided by
+         <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro and
+         Blender.
+       </p>
+
+       <p>
+         Page and visualizations created by Parker Schimpff for GEO 409, Department of
+         Geography, University of Kentucky. Spring 2024.
+       </p>
+       <img src="uoflRemoved.jpg" alt="Something about this map" width="100%" />
+       <p class="caption">Removal change map of University of Louisville</p>
+
+     </div>
+     <div class="right-column">
+       <h3>Right Column - Vizualizations </h3>
+       <img src="uoflBuilt.jpg" alt="Something about this map" width="100%" />
+       <p class="caption">Construction change map of University of Louisville</p>
+       <h3>Conclusions</h3>
+       <p>
+        This project has breifly shown 3D representations of the top universities in the state of Kentucky, change maps showing the construction and demolition occuring on both campuses,
+        and comparisons based on general statistics for both colleges. 
+       </p>
+       <p>
+        In my opinion, both Universities are comparable to one another and in a dicision of one over the other, it would come down to specifications in major, campus energy and culture,
+        and the cities themselves. Naunced aspects would have to come into play and there is no clear winner between the two. This project was a way for me to learn more about the University
+        of Louisville itself. 
+       </p>
+     </div>
+   </div>
+  </section>
+  <footer>
+    <hr />
+    <img src="logo-color-400px.png" alt="UKy Arts and Sciences  " width="300px">
+
+  </footer>
+</body>
+
+</html>
